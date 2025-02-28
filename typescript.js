@@ -34,3 +34,44 @@ const hello2 = (name) => {
 // オブジェクト
 const user_obj = { id: 100, name: 'John Doe' };
 const user_obj2 = { id: 100, name: 'John Doe' };
+let user_itf = {
+    firstName: 'John',
+    lastName: 'Smith',
+    greeting(message) {
+        return `${message} ${this.firstName}`;
+    }
+};
+console.log(user_itf.greeting('Hello'));
+// class
+class PersonModel {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const user2 = new PersonModel('John', 'Doe');
+console.log(user2.fullName());
+class PersonModel2 {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+class Student {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    greeting() {
+        return 'implements～～';
+    }
+}
+function hello_alias(name) {
+    return 'Hello, ' + name;
+}
